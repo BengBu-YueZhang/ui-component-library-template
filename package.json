@@ -1,0 +1,57 @@
+{
+  "name": "ui-component-template",
+  "version": "0.0.1",
+  "description": "A UI components Template Library with React",
+  "main": "dist/index.js",
+  "scripts": {
+    "build:normal": "cross-env NODE_ENV=development webpack --config build/webpack.normal.config.js",
+    "build:min": "cross-env NODE_ENV=production webpack --config build/webpack.min.config.js",
+    "build:style": "",
+    "build": "npm run build:style && npm run build:normal && npm run build:min",
+    "build:tsc": "tsc --project tsconfig.types.json",
+    "build:all": "npm run build && npm run build:tsc",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.config.js",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BengBu-YueZhang/ui-dev-template.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BengBu-YueZhang/ui-dev-template/issues"
+  },
+  "peerDependencies": {
+    "react": ">=16.13.0",
+    "react-dom": ">=16.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-export-default-from": "^7.8.3",
+    "@babel/plugin-proposal-export-namespace-from": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.8.7"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true
+  },
+  "include": [
+    "src"
+  ]
+}
