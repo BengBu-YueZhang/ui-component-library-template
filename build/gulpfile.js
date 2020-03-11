@@ -13,7 +13,7 @@ const ENTRY = resolve(__dirname, '../src/styles/index.less')
 const OUTPUT = resolve(__dirname, '../dist/styles')
 
 const buildCss = () => {
-  src(ENTRY)
+  return src(ENTRY)
   .pipe(less())
   .pipe(autoprefixer())
   .pipe(rename('ui-component-library-template.css'))
@@ -21,7 +21,7 @@ const buildCss = () => {
 }
 
 const buildUglifyCss = () => {
-  src(ENTRY)
+  return src(ENTRY)
   .pipe(less())
   .pipe(autoprefixer())
   .pipe(clean())
