@@ -1,11 +1,5 @@
-import * as React from 'react'
+import * as React from 'react';
 
-class Button extends React.Component {
-  render () {
-    return (
-      <button>Hello</button>
-    )
-  }
-}
+const Button: React.FC = () => <div>Hello Button</div>;
 
-export default Button
+export default Button;

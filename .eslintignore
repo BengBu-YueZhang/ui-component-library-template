@@ -6,3 +6,7 @@ node_modules
 notes
 script
 types
+
+karma.conf.js
+.babelrc.js
+stylelint.config.js
