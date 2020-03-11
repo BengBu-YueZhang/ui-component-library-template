@@ -4,7 +4,7 @@ module.exports = {
   devtool: 'source-map',
 
   entry: {
-    ReactUIComponentsLibrary: resolve(__dirname, '../src/index'),
+    'react-ui-components-library': resolve(__dirname, '../src/index'),
   },
 
   externals: {
