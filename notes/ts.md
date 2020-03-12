@@ -1,4 +1,3 @@
-
 ## Babel7在转义TS时能不能生成d.ts文件
 
 - [Babel 7 + Typescript - extracting declaration `d.ts` file on transpile](https://github.com/babel/babel/issues/9668)
