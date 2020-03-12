@@ -4,12 +4,13 @@
   "description": "A UI components Template Library with React",
   "main": "dist/index.js",
   "scripts": {
+    "build:clear": "rimraf dist && rimraf lib && rimraf @types",
     "build:normal": "cross-env NODE_ENV=development webpack --config build/webpack.normal.config.js",
     "build:min": "cross-env NODE_ENV=production webpack --config build/webpack.min.config.js",
     "build:style": "gulp --gulpfile build/gulpfile.js",
-    "build": "npm run build:style && npm run build:normal && npm run build:min",
+    "build:all": "npm run build:style && npm run build:normal && npm run build:min",
     "build:tsc": "tsc --project tsconfig.types.json",
-    "build:all": "npm run build && npm run build:tsc",
+    "build": "npm run build:clear && npm run build:all && npm run build:tsc",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.config.js",
     "test": "",
     "eslint": "eslint . --ext .js,.jsx,.ts,.tsx"
@@ -58,6 +59,7 @@
     "html-webpack-plugin": "^3.2.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "rimraf": "^3.0.2",
     "typescript": "^3.8.3",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
