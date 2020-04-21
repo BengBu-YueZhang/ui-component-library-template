@@ -13,6 +13,7 @@
     "build": "npm run build:clear && npm run build:all && npm run build:tsc",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.config.js",
     "jest": "jest --coverage",
+    "jest:snapshot": "jest -u",
     "test": "npm run lint && npm run jest",
     "eslint-ts": "eslint src --ext .ts,.tsx",
     "eslint-js": "eslint src --ext .js,.jsx",

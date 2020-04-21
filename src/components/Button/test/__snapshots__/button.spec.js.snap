@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Button组件快照测试 1`] = `
+<div
+  onClick={[Function]}
+  role="button"
+>
+  click2
+</div>
+`;

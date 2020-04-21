@@ -8,6 +8,14 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('Button', () => {
 
+  it('Button组件快照测试', () => {
+    const component = renderer.create(
+      <Button>click</Button>
+    );
+    let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   it('测试Button组件的children渲染', () => {
     const wrapper = Enzyme.shallow(
       <Button>click</Button>
