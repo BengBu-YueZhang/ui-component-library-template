@@ -20,14 +20,14 @@ describe('Button', () => {
     expect(count).toBe(1);
   });
 
-  it('测试Button组件的DOM结构', () => {
+  it('测试Button组件的结构', () => {
     const wrapper = Enzyme.shallow(
       <Button>click</Button>
     );
     expect(wrapper.contains('click')).toBe(true);
   });
 
-  it('模拟点击Button组件', () => {
+  it('模拟Button组件的点击', () => {
     let count = 0;
     const handleClick = () => {
       count += 1;
@@ -37,5 +37,12 @@ describe('Button', () => {
     );
     wrapper.find('div').simulate('click');
     expect(count).toBe(1);
-  })
+  });
+
+  it('测试Button组件的真实DOM结构', () => {
+    const wrapper = Enzyme.render(
+      <Button>click</Button>
+    );
+    expect(wrapper.text()).toBe('click');
+  });
 });
