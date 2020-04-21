@@ -7,27 +7,15 @@ import Button from '../index';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('Button', () => {
-  it('测试Button组件的onClick回调', () => {
-    let count = 0;
-    const handleClick = () => {
-      count += 1;
-    };
-    const component = renderer.create(
-      <Button onClick={handleClick}/>
-    );
-    const tree = component.toJSON();
-    tree.props.onClick();
-    expect(count).toBe(1);
-  });
 
-  it('测试Button组件的结构', () => {
+  it('测试Button组件的children渲染', () => {
     const wrapper = Enzyme.shallow(
       <Button>click</Button>
     );
     expect(wrapper.contains('click')).toBe(true);
   });
 
-  it('模拟Button组件的点击', () => {
+  it('模拟Button组件的点击回调', () => {
     let count = 0;
     const handleClick = () => {
       count += 1;
@@ -39,10 +27,10 @@ describe('Button', () => {
     expect(count).toBe(1);
   });
 
-  it('测试Button组件的真实DOM结构', () => {
+  it('测试Button组件的DOM结构', () => {
     const wrapper = Enzyme.render(
-      <Button>click</Button>
+      <Button>Hello</Button>
     );
-    expect(wrapper.text()).toBe('click');
+    expect(wrapper.text()).toBe('Hello');
   });
 });
