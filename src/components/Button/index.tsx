@@ -14,10 +14,14 @@ const Button: React.FC<ButtonProps> = (props) => {
     children,
   } = props;
 
+  const handleClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
+    onClick(event);
+  };
+
   return (
     <div
       role="button"
-      onClick={onClick}
+      onClick={handleClick}
     >
       {
         children
