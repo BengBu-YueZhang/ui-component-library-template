@@ -12,19 +12,19 @@ const removeJsFile = (pathname) => {
     const filePath = path.join(pathname, file);
     const stat = fs.lstatSync(filePath);
     if (stat.isDirectory()) {
-      removeJsFile(filePath)
+      removeJsFile(filePath);
     } else {
       if (/.js$/.test(file)) {
-        shell.exec(`rm ${filePath}`)
+        shell.exec(`rm ${filePath}`);
       }
     }
   });
 };
 
 if (!fs.readdirSync(typesDirPath).includes('types')) {
-  shell.exec(`rm -rf ${typesPath}`)
+  shell.exec(`rm -rf ${typesPath}`);
 }
 
 shell.exec(`tsc --project ${typesConfigPath}`);
 
-removeJsFile(typesPath)
+removeJsFile(typesPath);
