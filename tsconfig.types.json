@@ -4,7 +4,7 @@
     "target": "ES6",
     "moduleResolution": "Node",
     "declaration": true,
-    "outDir": "./lib"
+    "outDir": "./types"
   },
   "include": [
     "src"
