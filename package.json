@@ -2,7 +2,8 @@
   "name": "react-ui-components-library",
   "version": "0.0.1",
   "description": "A UI components Template Library with React",
-  "main": "dist/index.js",
+  "main": "dist/react-ui-components-library.js",
+  "typings": "types/index.d.ts",
   "scripts": {
     "clear": "rimraf dist && rimraf lib && rimraf @types",
     "build:normal": "cross-env NODE_ENV=development webpack --config build/webpack.normal.config.js",
@@ -20,11 +21,18 @@
     "lint-style": "",
     "lint": "npm run lint-ts && npm run lint-style"
   },
+  "keywords": [
+    "react",
+    "component",
+    "react-component",
+    "template",
+    "react-component-template"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BengBu-YueZhang/ui-dev-template.git"
   },
-  "author": "",
+  "author": "Frank Zhang",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/BengBu-YueZhang/ui-dev-template/issues"
