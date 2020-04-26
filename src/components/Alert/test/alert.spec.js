@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import Alert from '../index';
+import Alert from '../Alert';
 
 Enzyme.configure({ adapter: new Adapter() });
 

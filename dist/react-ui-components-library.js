@@ -96,9 +96,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/components/Alert/index.tsx":
+/***/ "./src/components/Alert/Alert.tsx":
 /*!****************************************!*\
-  !*** ./src/components/Alert/index.tsx ***!
+  !*** ./src/components/Alert/Alert.tsx ***!
   \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -107,7 +107,7 @@ return /******/ (function(modules) { // webpackBootstrap
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/zhangyue/Desktop/ui-component-library-template/src/components/Alert/index.tsx";
+var _jsxFileName = "/Users/zhangyue/Desktop/ui-component-library-template/src/components/Alert/Alert.tsx";
 
 
 var Alert = function Alert(props) {
@@ -125,10 +125,10 @@ var Alert = function Alert(props) {
 
 /***/ }),
 
-/***/ "./src/components/Button/index.tsx":
-/*!*****************************************!*\
-  !*** ./src/components/Button/index.tsx ***!
-  \*****************************************/
+/***/ "./src/components/Button/Button.tsx":
+/*!******************************************!*\
+  !*** ./src/components/Button/Button.tsx ***!
+  \******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -137,7 +137,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utils_noop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/noop */ "./src/utils/noop.ts");
-var _jsxFileName = "/Users/zhangyue/Desktop/ui-component-library-template/src/components/Button/index.tsx";
+var _jsxFileName = "/Users/zhangyue/Desktop/ui-component-library-template/src/components/Button/Button.tsx";
 
 
 
@@ -174,11 +174,11 @@ var Button = function Button(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Button */ "./src/components/Button/index.tsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return _components_Button__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+/* harmony import */ var _components_Button_Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Button/Button */ "./src/components/Button/Button.tsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return _components_Button_Button__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
-/* harmony import */ var _components_Alert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Alert */ "./src/components/Alert/index.tsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Alert", function() { return _components_Alert__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+/* harmony import */ var _components_Alert_Alert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Alert/Alert */ "./src/components/Alert/Alert.tsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Alert", function() { return _components_Alert_Alert__WEBPACK_IMPORTED_MODULE_1__["default"]; });
 
 
 

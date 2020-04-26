@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import Button from '../index';
+import Button from '../Button';
 
 Enzyme.configure({ adapter: new Adapter() });
 
