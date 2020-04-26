@@ -96,6 +96,35 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/components/Alert/index.tsx":
+/*!****************************************!*\
+  !*** ./src/components/Alert/index.tsx ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/zhangyue/Desktop/ui-component-library-template/src/components/Alert/index.tsx";
+
+
+var Alert = function Alert(props) {
+  var children = props.children;
+  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, children);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Alert);
+
+/***/ }),
+
 /***/ "./src/components/Button/index.tsx":
 /*!*****************************************!*\
   !*** ./src/components/Button/index.tsx ***!
@@ -107,18 +136,29 @@ return /******/ (function(modules) { // webpackBootstrap
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils_noop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/noop */ "./src/utils/noop.ts");
 var _jsxFileName = "/Users/zhangyue/Desktop/ui-component-library-template/src/components/Button/index.tsx";
 
 
-var Button = function Button() {
+
+var Button = function Button(props) {
+  var _props$onClick = props.onClick,
+      onClick = _props$onClick === void 0 ? _utils_noop__WEBPACK_IMPORTED_MODULE_1__["default"] : _props$onClick,
+      children = props.children;
+
+  var handleClick = function handleClick(event) {
+    onClick(event);
+  };
+
   return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
-    className: "button",
+    role: "button",
+    onClick: handleClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3
+      lineNumber: 22
     },
     __self: this
-  }, "Hello Button");
+  }, children);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Button);
@@ -129,7 +169,7 @@ var Button = function Button() {
 /*!***********************!*\
   !*** ./src/index.tsx ***!
   \***********************/
-/*! exports provided: Button */
+/*! exports provided: Button, Alert */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -137,7 +177,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Button */ "./src/components/Button/index.tsx");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return _components_Button__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
+/* harmony import */ var _components_Alert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Alert */ "./src/components/Alert/index.tsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Alert", function() { return _components_Alert__WEBPACK_IMPORTED_MODULE_1__["default"]; });
 
+
+
+
+/***/ }),
+
+/***/ "./src/utils/noop.ts":
+/*!***************************!*\
+  !*** ./src/utils/noop.ts ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var noop = function noop() {};
+
+/* harmony default export */ __webpack_exports__["default"] = (noop);
 
 /***/ }),
 
