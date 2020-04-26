@@ -19,7 +19,7 @@
     "test": "npm run lint && npm run jest",
     "lint-ts": "eslint src --ext .ts,.tsx",
     "lint-js": "eslint src --ext .js,.jsx",
-    "lint-style": "",
+    "lint-style": "stylelint  \"src/styles/**/*.less\"",
     "lint": "npm run lint-ts && npm run lint-style"
   },
   "keywords": [
