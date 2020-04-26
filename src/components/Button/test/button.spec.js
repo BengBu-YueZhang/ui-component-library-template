@@ -36,9 +36,9 @@ describe('Button', () => {
   });
 
   it('测试Button组件的DOM结构', () => {
-    const wrapper = Enzyme.render(
+    const wrapper = Enzyme.mount(
       <Button>Hello</Button>
     );
-    expect(wrapper.text()).toBe('Hello');
+    expect(wrapper.html()).toBe('<div role="button">Hello</div>');
   });
 });
