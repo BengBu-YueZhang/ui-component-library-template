@@ -125,6 +125,21 @@ var Alert = function Alert(props) {
 
 /***/ }),
 
+/***/ "./src/components/Alert/index.tsx":
+/*!****************************************!*\
+  !*** ./src/components/Alert/index.tsx ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Alert__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Alert */ "./src/components/Alert/Alert.tsx");
+
+/* harmony default export */ __webpack_exports__["default"] = (_Alert__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/***/ }),
+
 /***/ "./src/components/Button/Button.tsx":
 /*!******************************************!*\
   !*** ./src/components/Button/Button.tsx ***!
@@ -165,6 +180,21 @@ var Button = function Button(props) {
 
 /***/ }),
 
+/***/ "./src/components/Button/index.tsx":
+/*!*****************************************!*\
+  !*** ./src/components/Button/index.tsx ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./src/components/Button/Button.tsx");
+
+/* harmony default export */ __webpack_exports__["default"] = (_Button__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/***/ }),
+
 /***/ "./src/index.tsx":
 /*!***********************!*\
   !*** ./src/index.tsx ***!
@@ -174,11 +204,11 @@ var Button = function Button(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_Button_Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Button/Button */ "./src/components/Button/Button.tsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return _components_Button_Button__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+/* harmony import */ var _components_Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Button */ "./src/components/Button/index.tsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return _components_Button__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
-/* harmony import */ var _components_Alert_Alert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Alert/Alert */ "./src/components/Alert/Alert.tsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Alert", function() { return _components_Alert_Alert__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+/* harmony import */ var _components_Alert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Alert */ "./src/components/Alert/index.tsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Alert", function() { return _components_Alert__WEBPACK_IMPORTED_MODULE_1__["default"]; });
 
 
 
