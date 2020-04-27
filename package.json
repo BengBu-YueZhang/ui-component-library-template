@@ -5,7 +5,7 @@
   "main": "dist/react-ui-components-library.js",
   "typings": "types/index.d.ts",
   "scripts": {
-    "clear": "rimraf dist && rimraf lib",
+    "clear": "rimraf dist && rimraf lib && rimraf types",
     "build:dev": "cross-env NODE_ENV=development webpack --config build/webpack.normal.config.js",
     "build:prod": "cross-env NODE_ENV=production webpack --config build/webpack.min.config.js",
     "build:style": "gulp style --gulpfile build/gulpfile.js",

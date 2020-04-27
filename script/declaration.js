@@ -21,10 +21,6 @@ const removeJsFile = (pathname) => {
   });
 };
 
-if (!fs.readdirSync(typesDirPath).includes('types')) {
-  shell.exec(`rm -rf ${typesPath}`);
-}
-
 shell.exec(`tsc --project ${typesConfigPath}`);
 
 removeJsFile(typesPath);
