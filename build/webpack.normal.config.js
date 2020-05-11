@@ -18,7 +18,7 @@ module.exports = merge(WebpackBaseConfig, {
       'process.env.NODE_ENV': '"development"'
     }),
     new webpack.SourceMapDevToolPlugin({
-      filename: `[name].js.map`
+      filename: `[file].js.map`
     })
   ]
 })

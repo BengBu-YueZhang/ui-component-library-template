@@ -243,5 +243,5 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_react__;
 
 /******/ });
 });
-//# sourceMappingURL=react-ui-components-library.js.map
+//# sourceMappingURL=react-ui-components-library.js.js.map
 //# sourceMappingURL=react-ui-components-library.js.map
