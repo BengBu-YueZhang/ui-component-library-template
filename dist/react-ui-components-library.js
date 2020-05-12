@@ -104,24 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/zhangyue/Desktop/ui-component-library-template/src/components/Alert/Alert.tsx";
-
-
-var Alert = function Alert(props) {
-  var children = props.children;
-  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, children);
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Alert);
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\nvar _jsxFileName = \"/Users/zhangyue/Desktop/ui-component-library-template/src/components/Alert/Alert.tsx\";\n\n\nvar Alert = function Alert(props) {\n  var children = props.children;\n  return react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 14\n    },\n    __self: this\n  }, children);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Alert);\n\n//# sourceURL=webpack://ui-components-library-template/./src/components/Alert/Alert.tsx?");
 
 /***/ }),
 
@@ -133,10 +116,7 @@ var Alert = function Alert(props) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Alert__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Alert */ "./src/components/Alert/Alert.tsx");
-
-/* harmony default export */ __webpack_exports__["default"] = (_Alert__WEBPACK_IMPORTED_MODULE_0__["default"]);
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Alert__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Alert */ \"./src/components/Alert/Alert.tsx\");\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_Alert__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n\n//# sourceURL=webpack://ui-components-library-template/./src/components/Alert/index.tsx?");
 
 /***/ }),
 
@@ -148,35 +128,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils_noop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/noop */ "./src/utils/noop.ts");
-var _jsxFileName = "/Users/zhangyue/Desktop/ui-component-library-template/src/components/Button/Button.tsx";
-
-
-
-var Button = function Button(props) {
-  var _props$onClick = props.onClick,
-      onClick = _props$onClick === void 0 ? _utils_noop__WEBPACK_IMPORTED_MODULE_1__["default"] : _props$onClick,
-      children = props.children;
-
-  var handleClick = function handleClick(event) {
-    onClick(event);
-  };
-
-  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
-    role: "button",
-    onClick: handleClick,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, children);
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Button);
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _utils_noop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/noop */ \"./src/utils/noop.ts\");\nvar _jsxFileName = \"/Users/zhangyue/Desktop/ui-component-library-template/src/components/Button/Button.tsx\";\n\n\n\nvar Button = function Button(props) {\n  var _props$onClick = props.onClick,\n      onClick = _props$onClick === void 0 ? _utils_noop__WEBPACK_IMPORTED_MODULE_1__[\"default\"] : _props$onClick,\n      children = props.children;\n\n  var handleClick = function handleClick(event) {\n    onClick(event);\n  };\n\n  return react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", {\n    role: \"button\",\n    onClick: handleClick,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 22\n    },\n    __self: this\n  }, children);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Button);\n\n//# sourceURL=webpack://ui-components-library-template/./src/components/Button/Button.tsx?");
 
 /***/ }),
 
@@ -188,10 +140,7 @@ var Button = function Button(props) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./src/components/Button/Button.tsx");
-
-/* harmony default export */ __webpack_exports__["default"] = (_Button__WEBPACK_IMPORTED_MODULE_0__["default"]);
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ \"./src/components/Button/Button.tsx\");\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_Button__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n\n//# sourceURL=webpack://ui-components-library-template/./src/components/Button/index.tsx?");
 
 /***/ }),
 
@@ -203,15 +152,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Button */ "./src/components/Button/index.tsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return _components_Button__WEBPACK_IMPORTED_MODULE_0__["default"]; });
-
-/* harmony import */ var _components_Alert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Alert */ "./src/components/Alert/index.tsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Alert", function() { return _components_Alert__WEBPACK_IMPORTED_MODULE_1__["default"]; });
-
-
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Button */ \"./src/components/Button/index.tsx\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Button\", function() { return _components_Button__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n/* harmony import */ var _components_Alert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Alert */ \"./src/components/Alert/index.tsx\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Alert\", function() { return _components_Alert__WEBPACK_IMPORTED_MODULE_1__[\"default\"]; });\n\n\n\n\n//# sourceURL=webpack://ui-components-library-template/./src/index.tsx?");
 
 /***/ }),
 
@@ -223,10 +164,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-var noop = function noop() {};
-
-/* harmony default export */ __webpack_exports__["default"] = (noop);
+eval("__webpack_require__.r(__webpack_exports__);\nvar noop = function noop() {};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (noop);\n\n//# sourceURL=webpack://ui-components-library-template/./src/utils/noop.ts?");
 
 /***/ }),
 
@@ -237,11 +175,10 @@ var noop = function noop() {};
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_react__;
+eval("module.exports = __WEBPACK_EXTERNAL_MODULE_react__;\n\n//# sourceURL=webpack://ui-components-library-template/external_%7B%22root%22:%22React%22,%22commonjs2%22:%22react%22,%22commonjs%22:%22react%22,%22amd%22:%22react%22%7D?");
 
 /***/ })
 
 /******/ });
 });
 //# sourceMappingURL=react-ui-components-library.js.js.map
-//# sourceMappingURL=react-ui-components-library.js.map

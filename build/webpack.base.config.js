@@ -1,7 +1,6 @@
 const { resolve } = require('path')
 
 module.exports = {
-  devtool: 'source-map',
 
   entry: {
     'react-ui-components-library': resolve(__dirname, '../src/index'),
