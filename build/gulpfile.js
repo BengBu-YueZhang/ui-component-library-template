@@ -24,7 +24,7 @@ const buildCss = () => {
   return src(ENTRY)
   .pipe(less())
   .pipe(autoprefixer())
-  .pipe(rename('ui-component-library-template.css'))
+  .pipe(rename('react-ui-components-library.css'))
   .pipe(dest(OUTPUT));
 };
 
@@ -33,7 +33,7 @@ const buildUglifyCss = () => {
   .pipe(less())
   .pipe(autoprefixer())
   .pipe(clean())
-  .pipe(rename('ui-component-library-template.min.css'))
+  .pipe(rename('react-ui-components-library.min.css'))
   .pipe(dest(OUTPUT));
 };
 
