@@ -13,7 +13,6 @@
     "build:lib": "gulp lib --gulpfile build/gulpfile.js",
     "build:declaration": "node script/declaration.js",
     "build": "npm run clear && npm run build:dist && npm run build:lib && npm run build:declaration",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.config.js",
     "jest": "jest --coverage",
     "jest:snapshot": "jest -u",
     "test": "npm run lint && npm run jest",

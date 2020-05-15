@@ -7,7 +7,6 @@
 *.bak
 .DS_Store
 node_modules/
-coverage/
 .project
 .settings
 npm-debug.log
