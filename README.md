@@ -82,6 +82,21 @@ commit注释规范说明，比如添加了一个新功能，commit的注释应�
 
 ## 使用说明
 
+
+```js
+import { Button } from '组件库'
+
+function App() {
+  return <Button>Hello World</Button>;
+}
+```
+
+### 引入全局样式
+
+```js
+import 'react-ui-components-library/dist/styles/react-ui-components-library.css'
+```
+
 ### 组件按需引入说明
 
 安装 `babel-plugin-import` 插件，并添加如下的babel配置
