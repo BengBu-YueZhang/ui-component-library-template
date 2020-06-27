@@ -11,8 +11,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
 const babelrc = require('../.babelrc.js');
 
-const ENTRY = resolve(__dirname, '../src/styles/index.less');
 const OUTPUT = resolve(__dirname, '../dist/styles');
+const THEMES = ['default', 'dark'];
 const LIB_ENTRY = [
   resolve(__dirname, '../src/**/*.tsx'),
   resolve(__dirname, '../src/**/*.ts'),
@@ -21,20 +21,24 @@ const LIB_ENTRY = [
 const LIB_OUTPUT = resolve(__dirname, '../lib');
 
 const buildCss = () => {
-  return src(ENTRY)
-  .pipe(less())
-  .pipe(autoprefixer())
-  .pipe(rename('react-ui-components-library.css'))
-  .pipe(dest(OUTPUT));
+  return THEMES.map(theme => {
+    return src(resolve(__dirname, `../src/styles/themes/${theme}/index.less`))
+    .pipe(less())
+    .pipe(autoprefixer())
+    .pipe(rename(`react-ui-components-library.${theme}.css`))
+    .pipe(dest(OUTPUT));
+  })
 };
 
 const buildUglifyCss = () => {
-  return src(ENTRY)
-  .pipe(less())
-  .pipe(autoprefixer())
-  .pipe(clean())
-  .pipe(rename('react-ui-components-library.min.css'))
-  .pipe(dest(OUTPUT));
+  return THEMES.map(theme => {
+    return src(resolve(__dirname, `../src/styles/themes/${theme}/index.less`))
+    .pipe(less())
+    .pipe(autoprefixer())
+    .pipe(clean())
+    .pipe(rename(`react-ui-components-library.${theme}.min.css`))
+    .pipe(dest(OUTPUT));
+  })
 };
 
 const buildLib = () => {

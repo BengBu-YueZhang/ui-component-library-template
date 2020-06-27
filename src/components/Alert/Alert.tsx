@@ -11,7 +11,9 @@ const Alert: React.FC<AlertProps> = (props) => {
   } = props;
 
   return (
-    <div>
+    <div
+      className="alert"
+    >
       {
         children
       }
