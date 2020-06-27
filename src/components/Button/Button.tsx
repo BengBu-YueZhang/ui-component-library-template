@@ -20,6 +20,7 @@ const Button: React.FC<ButtonProps> = (props) => {
 
   return (
     <div
+      className="button"
       role="button"
       onClick={handleClick}
     >
