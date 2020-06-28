@@ -48,8 +48,8 @@ const buildLib = () => {
 }
 
 exports.style = series(
-  buildCss,
-  buildUglifyCss
+  ...buildCss,
+  ...buildUglifyCss
 );
 
 exports.lib = series(
