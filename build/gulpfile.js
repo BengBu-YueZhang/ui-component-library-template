@@ -2,7 +2,8 @@ const { resolve } = require('path');
 const {
   src,
   dest,
-  series
+  series,
+  task
 } = require('gulp');
 const clean = require('gulp-clean-css');
 const less = require('gulp-less');
@@ -22,22 +23,30 @@ const LIB_OUTPUT = resolve(__dirname, '../lib');
 
 const buildCss = () => {
   return THEMES.map(theme => {
-    return src(resolve(__dirname, `../src/styles/themes/${theme}/index.less`))
-    .pipe(less())
-    .pipe(autoprefixer())
-    .pipe(rename(`react-ui-components-library.${theme}.css`))
-    .pipe(dest(OUTPUT));
+    const taskName = `buildCss-${theme}`;
+    task(taskName, () => {
+      return src(resolve(__dirname, `../src/styles/themes/${theme}/index.less`))
+      .pipe(less())
+      .pipe(autoprefixer())
+      .pipe(rename(`react-ui-components-library.${theme}.css`))
+      .pipe(dest(OUTPUT));
+    });
+    return taskName;
   })
 };
 
 const buildUglifyCss = () => {
   return THEMES.map(theme => {
-    return src(resolve(__dirname, `../src/styles/themes/${theme}/index.less`))
-    .pipe(less())
-    .pipe(autoprefixer())
-    .pipe(clean())
-    .pipe(rename(`react-ui-components-library.${theme}.min.css`))
-    .pipe(dest(OUTPUT));
+    const taskName = `buildUglifyCss-${theme}`;
+    task(taskName, () => {
+      return src(resolve(__dirname, `../src/styles/themes/${theme}/index.less`))
+      .pipe(less())
+      .pipe(autoprefixer())
+      .pipe(clean())
+      .pipe(rename(`react-ui-components-library.${theme}.min.css`))
+      .pipe(dest(OUTPUT));
+    });
+    return taskName;
   })
 };
 
@@ -48,8 +57,8 @@ const buildLib = () => {
 }
 
 exports.style = series(
-  ...buildCss,
-  ...buildUglifyCss
+  ...buildCss(),
+  ...buildUglifyCss()
 );
 
 exports.lib = series(
