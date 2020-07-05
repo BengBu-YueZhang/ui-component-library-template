@@ -19,6 +19,7 @@
     "lint-ts": "eslint src --ext .ts,.tsx",
     "lint-js": "eslint src --ext .js,.jsx",
     "lint-style": "stylelint  \"src/styles/**/*.less\"",
+    "lint-style-fix": "stylelint  \"src/styles/**/*.less\" --fix",
     "lint": "npm run lint-ts && npm run lint-style"
   },
   "keywords": [
