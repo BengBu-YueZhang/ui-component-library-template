@@ -19,6 +19,6 @@ describe('Alert', () => {
     const wrapper = Enzyme.mount(
       <Alert>Hello</Alert>
     );
-    expect(wrapper.html()).toBe('<div>Hello</div>');
+    expect(wrapper.html()).toBe('<div class="alert">Hello</div>');
   });
 });

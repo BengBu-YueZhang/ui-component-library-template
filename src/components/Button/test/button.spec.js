@@ -39,6 +39,6 @@ describe('Button', () => {
     const wrapper = Enzyme.mount(
       <Button>Hello</Button>
     );
-    expect(wrapper.html()).toBe('<div role="button">Hello</div>');
+    expect(wrapper.html()).toBe('<div class="button" role="button">Hello</div>');
   });
 });

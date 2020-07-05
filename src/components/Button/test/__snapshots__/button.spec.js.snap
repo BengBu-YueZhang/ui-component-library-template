@@ -2,6 +2,7 @@
 
 exports[`Button Button组件快照测试 1`] = `
 <div
+  className="button"
   onClick={[Function]}
   role="button"
 >
