@@ -10,8 +10,8 @@ module.exports = merge(BaseConfig, {
   mode: 'development',
 
   devServer: {
-    host: '',
-    port: '',
+    host: '127.0.0.1',
+    port: '8060',
     hot: true
   },
 

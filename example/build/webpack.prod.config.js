@@ -15,10 +15,38 @@ module.exports = merge(BaseConfig, {
   devtool: 'false',
 
   optimization: {
+    minimize: true,
     minimizer: [
+      new TerserPlugin(),
+      new OptimizeCSSAssetsPlugin()
     ],
-    splitChunks: [
-    ],
+    splitChunks: {
+      chunks: 'all',
+      maxAsyncRequests: 6,
+      maxInitialRequests: 6,
+      minChunks: 2,
+      minSize: 30000,
+      cacheGroups: {
+        react: {
+          test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+          name: 'react-chunk',
+          chunks: 'all',
+          priority: 30
+        },
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors-chunk',
+          chunks: 'all',
+          priority: 20
+        },
+        common: {
+          test: path.resolve(__dirname, './../src'),
+          name: 'common-chunk',
+          chunks: 'all',
+          priority: 10
+        }
+      }
+    },
   },
 
   module: {
@@ -45,10 +73,16 @@ module.exports = merge(BaseConfig, {
 
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin(),
-    new MiniCssExtractPlugin(),
-    new webpack.HashedModuleIdsPlugin(),
-    new webpack.NamedChunksPlugin(),
+    new HtmlWebpackPlugin({
+      filename: resolve(__dirname, './../dist/index.html'),
+      template: resolve(__dirname, './../public/index.html')
+    }),
+    new MiniCssExtractPlugin({
+      filename: './static/css/[contenthash].css'
+    }),
+    new webpack.HashedModuleIdsPlugin({
+      hashFunction: 'sha256'
+    }),
     new BundleAnalyzerPlugin()
   ]
 })

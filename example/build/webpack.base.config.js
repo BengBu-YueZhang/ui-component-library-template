@@ -6,10 +6,9 @@ module.exports = {
   entry: resolve(__dirname, '../src/index.js'),
 
   output: {
-    path: '',
-    filename: '',
-    chunkFilename: '',
-    publicPath: '',
+    path: resolve(__dirname, '../dist'),
+    filename: './static/js/[name].[contenthash].js',
+    chunkFilename: './static/js/[name].[contenthash].chunk.js',
   },
 
   resolve: {
