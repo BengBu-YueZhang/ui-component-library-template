@@ -4,9 +4,9 @@
   "description": "example",
   "main": "index.js",
   "scripts": {
-    "dev": "",
-    "start": "",
-    "build": ""
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.dev.config.js --color",
+    "start": "npm run dev",
+    "build": "cross-env NODE_ENV=production webpack --config ./build/webpack.prod.config.js --color"
   },
   "author": "\"Frank Zhang\"",
   "license": "MIT",
@@ -21,6 +21,7 @@
     "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.6.0",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.1",

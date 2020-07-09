@@ -5,17 +5,11 @@ module.exports = {
 
   entry: resolve(__dirname, '../src/index.js'),
 
-  output: {
-    path: resolve(__dirname, '../dist'),
-    filename: './static/js/[name].[contenthash].js',
-    chunkFilename: './static/js/[name].[contenthash].chunk.js',
-  },
-
   resolve: {
     extensions: ['.js'],
 
     alias: {
-      '@': path.resolve(__dirname, '../src'),
+      '@': resolve(__dirname, '../src'),
     },
   },
 

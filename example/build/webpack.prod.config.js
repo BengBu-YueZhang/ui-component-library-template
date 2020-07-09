@@ -14,6 +14,12 @@ module.exports = merge(BaseConfig, {
 
   devtool: 'false',
 
+  output: {
+    path: resolve(__dirname, '../dist'),
+    filename: './static/js/[name].[contenthash].js',
+    chunkFilename: './static/js/[name].[contenthash].chunk.js',
+  },
+
   optimization: {
     minimize: true,
     minimizer: [
