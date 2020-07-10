@@ -3,6 +3,7 @@ module.exports = function (api) {
   const isDevelopment = NODE_ENV === 'development'
 
   if (api) {
+    // babel缓存
     api.cache.invalidate(() => NODE_ENV)
   }
 
@@ -12,6 +13,8 @@ module.exports = function (api) {
       [
         "@babel/preset-react",
         {
+          // @babel/plugin-transform-react-jsx-self
+          // @babel/plugin-transform-react-jsx-source
           development: isDevelopment
         }
       ],
