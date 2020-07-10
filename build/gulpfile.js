@@ -20,6 +20,7 @@ const LIB_ENTRY = [
   resolve(__dirname, '../src/*.tsx')
 ];
 const LIB_OUTPUT = resolve(__dirname, '../lib');
+const ES_OUTPUT = resolve(__dirname, '../es');
 
 const buildCss = () => {
   return THEMES.map(theme => {
@@ -56,6 +57,17 @@ const buildLib = () => {
     .pipe(dest(LIB_OUTPUT));
 }
 
+const buildEs = () => {
+  return src(LIB_ENTRY)
+    .pipe(babel(babelrc(null, {
+      NODE_ENV: 'es'
+    })))
+    .pipe(dest(LIB_OUTPUT));
+};
+
+const copyLess = () => {
+};
+
 exports.style = series(
   ...buildCss(),
   ...buildUglifyCss()
@@ -63,4 +75,12 @@ exports.style = series(
 
 exports.lib = series(
   buildLib
+);
+
+exports.es = series(
+  buildEs
+);
+
+exports.copy = series(
+  copyLess
 );

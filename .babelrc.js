@@ -1,6 +1,7 @@
 module.exports = function (api) {
   const { NODE_ENV } = process.env
   const isDevelopment = NODE_ENV === 'development'
+  const envModules = NODE_ENV === 'es' ? true : 'cjs'
 
   if (api) {
     // babel缓存
@@ -9,7 +10,12 @@ module.exports = function (api) {
 
   return {
     presets: [
-      "@babel/preset-env",
+      [
+        "@babel/preset-env",
+        {
+          modules: envModules
+        }
+      ]
       [
         "@babel/preset-react",
         {
