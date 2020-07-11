@@ -16,7 +16,7 @@ module.exports = function (api) {
         {
           modules: envModules // 模块转换的目标
         }
-      ]
+      ],
       [
         "@babel/preset-react",
         {
