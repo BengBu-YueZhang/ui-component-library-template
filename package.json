@@ -13,7 +13,7 @@
     "build:lib": "gulp lib --gulpfile build/gulpfile.js",
     "build:es": "gulp es --gulpfile build/gulpfile.js",
     "build:declaration": "node script/declaration.js",
-    "build": "npm run clear && npm run build:dist && npm run build:lib && npm run build:declaration",
+    "build": "npm run clear && npm run build:dist && npm run build:lib && npm run build:es && npm run copy:less && npm run build:declaration",
     "copy:less": "gulp copy --gulpfile build/gulpfile.js",
     "jest": "jest --coverage",
     "jest:snapshot": "jest -u",
