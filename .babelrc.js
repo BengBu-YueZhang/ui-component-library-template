@@ -1,7 +1,7 @@
-module.exports = function (api) {
-  const { NODE_ENV } = process.env
+module.exports = function (api, options) {
+  const { NODE_ENV } = options || process.env
   const isDevelopment = NODE_ENV === 'development'
-  const envModules = NODE_ENV === 'es' ? true : 'cjs'
+  const envModules = NODE_ENV === 'es' ? false : 'cjs'
   const useESModules = envModules === 'cjs' ? false : true
 
   if (api) {
