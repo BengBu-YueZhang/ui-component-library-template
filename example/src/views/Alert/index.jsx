@@ -1,7 +1,12 @@
 import React from 'react'
+import { Alert } from 'react-ui-components-library'
 
-const Alert = () => {
-  return <div>Alert</div>
+const AlertView = () => {
+  return (
+    <div>
+      <Alert>Hello Alert</Alert>
+    </div>
+  )
 }
 
-export default Alert
+export default AlertView
