@@ -3,10 +3,10 @@ const { resolve } = require('path')
 module.exports = {
   target: 'web',
 
-  entry: resolve(__dirname, '../src/index.js'),
+  entry: resolve(__dirname, '../src/index.jsx'),
 
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', '.jsx'],
 
     alias: {
       '@': resolve(__dirname, '../src'),
