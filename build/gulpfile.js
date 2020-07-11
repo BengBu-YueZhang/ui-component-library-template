@@ -14,10 +14,13 @@ const babelrc = require('../.babelrc.js');
 
 const OUTPUT = resolve(__dirname, '../dist/styles');
 const THEMES = ['default', 'dark'];
-const LIB_ENTRY = [
+const TS_ENTRY = [
   resolve(__dirname, '../src/**/*.tsx'),
   resolve(__dirname, '../src/**/*.ts'),
   resolve(__dirname, '../src/*.tsx')
+];
+const LESS_ENTRY = [
+  resolve(__dirname, '../src/**/*.less')
 ];
 const LIB_OUTPUT = resolve(__dirname, '../lib');
 const ES_OUTPUT = resolve(__dirname, '../es');
@@ -52,20 +55,23 @@ const buildUglifyCss = () => {
 };
 
 const buildLib = () => {
-  return src(LIB_ENTRY)
+  return src(TS_ENTRY)
     .pipe(babel(babelrc()))
     .pipe(dest(LIB_OUTPUT));
 }
 
 const buildEs = () => {
-  return src(LIB_ENTRY)
+  return src(TS_ENTRY)
     .pipe(babel(babelrc(null, {
       NODE_ENV: 'es'
     })))
-    .pipe(dest(LIB_OUTPUT));
+    .pipe(dest(ES_OUTPUT));
 };
 
 const copyLess = () => {
+  return src(LESS_ENTRY)
+    .pipe(dest(LIB_OUTPUT))
+    .pipe(dest(ES_OUTPUT))
 };
 
 exports.style = series(
